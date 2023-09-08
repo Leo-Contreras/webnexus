@@ -7,13 +7,12 @@ import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+
+//import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'WebNexus — Servicio de Desarrollo Web Profesional',
   ignoreTitleTemplate: true,
 };
 ---
@@ -25,29 +24,25 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
+        text: 'Nuestros Servicios',
+        href: '/servicios',
         icon: 'tabler:download',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'Contactanos', href: '/contacto' },
     ]}
-    image={{ src: '~/assets/images/hero.png', alt: 'AstroWind Hero Image' }}
+    image={{ src: '~/assets/images/hero.png', alt: 'WebNexus Hero Image' }}
   >
-    <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 3.0</span> + Tailwind CSS
-    </Fragment>
+  <Fragment slot="title">
+    Bienvenido a <span class="text-accent dark:text-white highlight">WebNexus</span>
+  </Fragment>
 
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 3.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-       Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages
-      & Blogs.
-    </Fragment>
+  <Fragment slot="subtitle">
+    <span class="hidden sm:inline">
+      <span class="font-semibold">WebNexus</span> es tu solución definitiva para el desarrollo de páginas web profesionales.</span
+    >
+    <span class="block mb-1 sm:hidden font-bold text-blue-600">WebNexus: Desarrollo profesional.</span>
+     Apto para Startups, Pequeñas Empresas, SaaS, Portafolios Profesionales, Páginas de Marketing, Landing Pages y Blogs.
+  </Fragment>
   </Hero>
 
   <!-- Note Widget ******************* -->
@@ -57,262 +52,264 @@ const metadata = {
   <!-- Features Widget *************** -->
 
   <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
-    items={[
-      {
-        title: 'Astro + Tailwind CSS Integration',
-        description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'Ready-to-use Components',
-        description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
-      },
-    ]}
-  />
+  id="features"
+  tagline="Características"
+  title="Lo que obtienes con WebNexus"
+  subtitle="Una de las soluciones más completas y profesionales para el desarrollo de sitios web en 2023."
+  items={[
+    {
+      title: 'Desarrollo a la Medida',
+      description:
+        'Ofrecemos soluciones personalizadas que se adaptan a las necesidades únicas de tu empresa o proyecto.',
+      icon: 'tabler:tools',
+    },
+    {
+      title: 'Tecnologías Actuales',
+      description:
+        'Utilizamos las últimas tecnologías para asegurar que tu sitio web sea rápido, seguro y eficiente.',
+      icon: 'tabler:brand-javascript',
+    },
+    {
+      title: 'SEO Optimizado',
+      description:
+        'Nos aseguramos de que tu sitio web esté optimizado para los motores de búsqueda, maximizando tu alcance.',
+      icon: 'tabler:search',
+    },
+    {
+      title: 'Soporte Continuo',
+      description:
+        'Ofrecemos soporte técnico continuo para garantizar que tu sitio web funcione sin problemas.',
+      icon: 'tabler:help',
+    },
+    {
+      title: 'Escalabilidad',
+      description:
+        'Construimos tu sitio web pensando en el futuro, permitiendo una fácil escalabilidad conforme crece tu negocio.',
+      icon: 'tabler:scale',
+    },
+    {
+      title: 'Innovación y Creatividad',
+      description:
+        'Nos apasiona la innovación y siempre estamos dispuestos a implementar nuevas ideas para mejorar tu proyecto.',
+      icon: 'tabler:bulb',
+    },
+  ]}
+/>
 
   <!-- Content Widget **************** -->
 
   <Content
-    isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
-    items={[
-      {
-        title: 'Built on top of Astro 3.0',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
-      },
-      {
-        title: 'Styled using Tailwind CSS',
-        description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
-      },
-      {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-       Gain a competitive advantage by incorporating industry leading practices
-    </Fragment>
+  isReversed
+  tagline="Dentro de WebNexus"
+  title="La misión de WebNexus: ¡Conectar tus ideas con el mundo!"
+  items={[
+    {
+      title: 'Enfocado en el Cliente',
+      description:
+        'Nos centramos en las necesidades específicas de cada cliente para ofrecer soluciones que realmente importan.',
+    },
+    {
+      title: 'Tecnologías de Vanguardia',
+      description:
+        'Utilizamos tecnologías actuales para garantizar que tu sitio web esté a la vanguardia en diseño y funcionalidad.',
+    },
+    {
+      title: 'Seguridad y Confiabilidad',
+      description:
+        'Toma en serio la seguridad de tu sitio web. Utilizamos prácticas seguras para proteger tu información y la de tus usuarios.',
+    },
+  ]}
+  image={{
+    src: '~/assets/images/edificios.jpg',  // Puedes cambiar esto por la imagen que mejor represente a WebNexus
+    alt: 'Imagen representativa de WebNexus',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Construyendo sobre bases sólidas</h3>
+    Obtén una ventaja competitiva al incorporar las mejores prácticas de la industria en tu proyecto web.
+  </Fragment>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
 
   <!-- Content Widget **************** -->
 
   <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
+  isAfterContent
+  items={[
+    {
+      title: 'Personalización al Máximo Nivel',
+      description:
+        'Adaptamos cada proyecto a la identidad y requisitos de tu marca, haciendo que tu sitio web sea único y ahorrándote tiempo en el proceso.',
+    },
+    {
+      title: 'Amplias Posibilidades de Diseño',
+      description:
+        'Explora diversas opciones de diseño para encontrar la estructura que mejor presente tu contenido, mejorando la interacción del usuario y la navegación.',
+    },
+    {
+      title: 'Diseño Completamente Adaptable',
+      description:
+        'Aseguramos el rendimiento óptimo de tu sitio web en diversos dispositivos y tamaños de pantalla, proporcionando una experiencia de usuario consistente y agradable.',
+    },
+    {
+      title: 'Integración de Medios Multimedia',
+      description:
+        'Incorporamos de manera fluida imágenes, videos y elementos multimedia que realzan tu contenido y atraen efectivamente a los visitantes.',
+    },
+  ]}
+  image={{
+    src: '~/assets/images/junta.jpg',  // Puedes cambiar esto por la imagen que mejor represente a WebNexus
+    alt: 'Imagen representativa de WebNexus',
+  }}
+>
+  <Fragment slot="content">Asegura que tu presencia en línea realmente te represente.</Fragment>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+  <!-- Content Widget **************** -->
+
+  <Content
+  isReversed
+  isAfterContent
+  items={[
+    {
+      title: 'Compromiso del Usuario Mejorado',
+      description:
+        'Cautiva a tu audiencia con elementos interactivos, navegación intuitiva y diseños visualmente atractivos que fomentan visitas más largas.',
+    },
+    {
+      title: 'Mejora Continua',
+      description:
+        'Con WebNexus, tu sitio web se mantiene al día con las últimas tendencias y tecnologías mediante actualizaciones y mejoras regulares.',
+    },
+    {
+      title: 'Eficiencia en Tiempo y Recursos',
+      description:
+        'Omite el proceso largo y tedioso de construir un sitio web desde cero. Lanza tu presencia en línea más rápidamente con nuestros servicios.',
+    },
+    {
+      title: 'Soporte Comunitario y Profesional',
+      description:
+        'Únete a nuestra creciente comunidad de clientes satisfechos para obtener conocimientos, recursos y asistencia, asegurando que nunca estés solo en tu viaje de desarrollo web.',
+    },
+  ]}
+  image={{
+    src: '~/assets/images/programando.jpg',  // Puedes cambiar esto por una imagen que represente a WebNexus
+    alt: 'Imagen representativa de WebNexus',
+  }}
+>
+  <Fragment slot="content">Diseñado para fomentar el crecimiento y el éxito.</Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
 
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</em>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
+  title="Consigue el sitio web de tus sueños en tiempo récord con WebNexus."
+  items={[
+    {
+      title: 'Paso 1: <span class="font-medium">Consulta Inicial</span>',
+      description:
+        "Todo comienza con una conversación. Ponte en contacto con nosotros para discutir tus necesidades y visiones. Vamos a definir el alcance y los objetivos del proyecto en esta fase inicial.",
+      icon: 'tabler:message-circle',
+    },
+    {
+      title: 'Paso 2: <span class="font-medium">Planificación</span>',
+      description:
+        "Esquematizamos un plan de acción basado en tus requisitos. Te proporcionamos un cronograma detallado y una estimación de costos para asegurar que estamos en la misma página.",
+      icon: 'tabler:calendar',
+    },
+    {
+      title: 'Paso 3: <span class="font-medium">Desarrollo</span>',
+      description:
+        "Nuestro equipo de desarrolladores y diseñadores se pone manos a la obra para crear un sitio que no solo cumpla sino que supere tus expectativas. Mantenemos una comunicación constante para asegurar que el proyecto avance de manera fluida.",
+      icon: 'tabler:code',
+    },
+    {
+      title: 'Paso 4: <span class="font-medium">Revisión y Lanzamiento</span>',
+      description:
+        "Antes de lanzar, revisamos todo meticulosamente y realizamos las pruebas necesarias para garantizar la máxima calidad. Una vez que estés satisfecho, ¡tu sitio estará listo para conquistar el mundo digital!",
+      icon: 'tabler:rocket',
+    },
+  ]}
+  image={{
+    src: '~/assets/images/caminar.jpg',  // Cambia esto por una imagen que represente el proceso con WebNexus
+    alt: 'Imagen del proceso de servicio de WebNexus',
+  }}
+/>
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
+  title="Widget esenciales para tu sitio"
+  subtitle="Descubre componentes clave para construir sitios web efectivos con nuestra tecnología"
+  tagline="Componentes Esenciales"
+  items={[
+    {
+      title: 'Encabezados Dinámicos',
+      description: "Más que una simple navegación; nuestros encabezados son el tablero de control para tu experiencia en línea.",
+      icon: 'flat-color-icons:template',
+    },
+    {
+      title: 'Secciones Impactantes',
+      description:
+        "Captura la atención desde el primer momento con diseños visuales cautivadores y contenido relevante.",
+      icon: 'flat-color-icons:gallery',
+    },
+    {
+      title: 'Funciones Avanzadas',
+      description:
+        'Integra funcionalidades que aumentan el compromiso del usuario y convierten visitantes en clientes.',
+      icon: 'flat-color-icons:approval',
+    },
+    {
+      title: 'Contenido Relevante',
+      description:
+        "Priorizamos contenido que aporte valor, elevando la tasa de retención y el SEO de tu sitio.",
+      icon: 'flat-color-icons:document',
+    },
+    {
+      title: 'Llamadas a la Acción Efectivas',
+      description:
+        'Nuestros CTAs son más que simples botones; son pasos cuidadosamente diseñados en el viaje del cliente.',
+      icon: 'flat-color-icons:advertising',
+    },
+    {
+      title: 'Opciones de Precios Claras',
+      description: 'Transparencia total para que puedas tomar decisiones informadas sin sorpresas.',
+      icon: 'flat-color-icons:currency-exchange',
+    },
+    {
+      title: 'Testimonios Auténticos',
+      description: 'Voces reales de clientes satisfechos que respaldan la calidad de nuestro servicio.',
+      icon: 'flat-color-icons:voice-presentation',
+    },
+    {
+      title: 'Contacto Simplificado',
+      description:
+        'Múltiples canales de comunicación para que siempre puedas encontrar la ayuda que necesitas.',
+      icon: 'flat-color-icons:business-contact',
+    },
+    {
+      title: 'Pies de Página Útiles',
+      description: "Más que un cierre, una última oportunidad para interactuar y ofrecer valor.",
+      icon: 'flat-color-icons:database',
+    },
+  ]}
+/>
+   
 
-  <!-- HighlightedPosts Widget ******* -->
+  <!-- HighlightedPosts Widget ******* 
 
   <BlogLatestPosts
     title="Find out more content in our Blog"
@@ -321,79 +318,80 @@ const metadata = {
                         Astro is a very interesting technology. Thanks.
                 `}
   />
-
+-->
   <!-- FAQs Widget ******************* -->
 
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    <FAQs
+    title="Preguntas Frecuentes"
+    subtitle="Explora las siguientes preguntas para obtener más información sobre las poderosas características que ofrecemos y cómo podemos potenciar tu proyecto web."
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why AstroWind?',
+        title: '¿Por qué elegir nuestra agencia?',
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          "Nos centramos en la eficiencia, el diseño atractivo y una experiencia de usuario excepcional para que tu sitio web no solo se vea bien, sino que también funcione sin problemas.",
       },
       {
-        title: 'What do I need to start?',
+        title: '¿Qué necesito para empezar?',
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          'Todo lo que necesitas es una idea y un objetivo. Nosotros nos encargamos del resto, desde el diseño hasta el desarrollo y la implementación. Nuestros paquetes son escalables y se adaptan a una variedad de necesidades y presupuestos.',
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: '¿Cómo instalo la plantilla Astro + Tailwind CSS?',
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          'Ofrecemos una guía de inicio rápido y documentación detallada para ayudarte a instalar y personalizar tu plantilla, paso a paso. Además, nuestro equipo de soporte está siempre dispuesto a ayudar.',
       },
       {
-        title: "What's something that you don't understand?",
+        title: '¿Hay algo que no entiendas sobre nuestros servicios?',
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+          'Nos esforzamos por ser claros y transparentes en todo lo que hacemos. Sin embargo, si hay algo que no comprendes, nuestro equipo de soporte está a solo un clic de distancia para resolver todas tus dudas.',
       },
       {
-        title: 'What is something that you would like to try again?',
+        title: '¿Hay algo que te gustaría probar de nuevo con nosotros?',
         description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+          'Valoramos el feedback de nuestros clientes y estamos siempre en proceso de mejora. Si hay algo en lo que piensas que podríamos hacerlo mejor, nos encantaría escucharte.',
       },
       {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        title: 'Si pudieras hacer solo una pregunta a cada persona que conoces, ¿cuál sería?',
         description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+          'Nuestra pregunta sería: ¿Cuál es el principal desafío que quieres resolver con tu sitio web? Esta pregunta nos ayuda a alinear nuestros servicios con tus objetivos específicos.',
       },
     ]}
   />
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
+    <!-- Stats Widget **************** 
+    <Stats
     stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
+      { title: 'Proyectos Completados', amount: '132' },
+      { title: 'Clientes Satisfechos', amount: '248' },
+      { title: 'Premios Ganados', amount: '10' },
+      { title: 'Miembros del Equipo', amount: '48' },
     ]}
   />
-
-  <!-- CallToAction Widget *********** -->
-
+-->
+  <!-- CallToAction Widget *********** 
   <CallToAction
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
+        text: 'Solicitar Servicio',
+        href: '#contacto',
+        icon: 'tabler:mail',
       },
     ]}
-  >
+    >
     <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      ¡Dale vida a tu idea!<br class="block sm:hidden" />
     </Fragment>
-
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Obtén un sitio web profesional que se adapte a tus necesidades y presupuesto.
+    <Fragment slot="footer">
+      Nos enorgullece ofrecer soluciones tecnológicas que impulsan el crecimiento y el éxito de tu negocio.
     </Fragment>
   </CallToAction>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Features2>
+-->
 </Layout>

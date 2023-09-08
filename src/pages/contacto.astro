@@ -1,0 +1,96 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contacto - Agencia Digital del Estado de Baja California',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+  <HeroText tagline="Contacto" title="¡Conectémonos!" />
+
+  <ContactUs
+    title="¡Envíanos un mensaje hoy mismo!"
+    subtitle="Para respuestas más rápidas, explora nuestra sección de preguntas frecuentes. ¡Puede que encuentres justo la solución que buscas! Si no es así, nuestro equipo de soporte estará encantado de ayudarte."
+    inputs={[
+      {
+        type: 'text',
+        name: 'nombre',
+        label: 'Nombre',
+      },
+      {
+        type: 'email',
+        name: 'correo',
+        label: 'Correo Electrónico',
+      },
+    ]}
+    textarea={{
+      label: 'Mensaje',
+    }}
+    disclaimer={{
+      label:
+        'Al enviar este formulario de contacto, reconoces y aceptas la recopilación de tu información personal.',
+    }}
+    description="Nuestro equipo de soporte generalmente responde en un plazo de 24 horas hábiles."
+  />
+
+
+  <!-- Features2 Widget ************** -->
+  <Features2
+    title="¡Estamos aquí para ayudarte!"
+    items={[
+      {
+        title: 'Soporte General',
+        description: `Chatea con nosotros para consultas relacionadas con la gestión de cuentas, navegación del sitio web, problemas de pago, acceso a plantillas compradas o preguntas generales sobre la funcionalidad del sitio web.`,
+      },
+      {
+        title: 'Contacto de Ventas',
+        description:
+          'Chatea con nosotros para preguntas sobre compras, opciones de personalización, licencias para uso comercial, consultas sobre plantillas específicas, etc.',
+      },
+      {
+        title: 'Soporte Técnico',
+        description:
+          'Chatea con nosotros cuando enfrentes problemas como instalación de plantillas, dificultades de edición, problemas de compatibilidad con software o errores de descarga, u otros desafíos técnicos relacionados con el uso de las plantillas.',
+      },
+      {
+        title: 'Teléfono',
+        description: '+52 (664) 7558851',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Correo Electrónico',
+        description: 'webnexus2023@gmail.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Ubicación',
+        description: 'Calzada Tecnológico #123, 22345, Tijuana, B.C., México',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+  <Features2
+  title="Soporte Técnico Integral"
+  tagline="Comunícate con nosotros"
+  columns={2}
+  items={[
+    {
+      title: 'Soporte en Línea 24/7',
+      description:
+        'Nuestro equipo de soporte técnico está disponible en línea todo el día para resolver tus dudas y problemas. Simplemente inicia un chat y estaremos ahí para ayudarte.',
+      icon: 'tabler:messages',
+    },
+    {
+      title: 'Asistencia Telefónica Personalizada',
+      description:
+        'Prefieres hablar con una persona real? Nuestra línea de atención está disponible para ofrecerte soluciones efectivas en tiempo real.',
+      icon: 'tabler:headset',
+    },
+  ]}
+/>
+</Layout>
