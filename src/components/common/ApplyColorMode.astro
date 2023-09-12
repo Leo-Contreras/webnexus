@@ -18,8 +18,10 @@ import { UI } from "~/utils/config";
         elem.checked = theme !== "dark";
       });
     }
+   
   }
 
+  /*
   if ((defaultTheme && defaultTheme.endsWith(":only")) || (!localStorage.theme && defaultTheme !== "system")) {
     applyTheme(defaultTheme.replace(":only", ""));
   } else if (
@@ -30,4 +32,20 @@ import { UI } from "~/utils/config";
   } else {
     applyTheme("light");
   }
-</script>
+*/
+  // Función para configurar el tema según el estado almacenado
+  const setTheme = () => {
+    const storedTheme = localStorage.getItem('theme'); // O cualquier otro medio para obtener el tema almacenado
+    if (storedTheme) {
+      applyTheme(storedTheme);
+    }
+  };
+
+  // Aplicar el tema cuando la página se carga por primera vez
+  setTheme();
+
+  // Aplicar el tema después de cada cambio de página con Astro.js
+  document.addEventListener('astro:after-swap', setTheme);
+
+  
+  </script>
